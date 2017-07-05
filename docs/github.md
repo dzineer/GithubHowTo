@@ -50,11 +50,59 @@ $ git commit -a -m 'Update copy'
 [master 77f7ad2] Update copy
  1 file changed, 50 insertions(+), 1 deletion(-)
 
+$ git status
+ On branch master
+ nothing to commit, working tree clean
+------------------------------------------------------
+-Add new File for project readme.md (example)
+------------------------------------------------------
+File: readme.md:
+------------------------------------------------------
+GitHub How To Documentation With Examples
+------------------------------------------------------
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   docs/github.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        reame.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+------------------------------------------------------
+- Add new readme.md file to repository
+------------------------------------------------------
+$ git add .
+
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   docs/github.md
+        new file:   reame.md
+------------------------------------------------------
+Commit changes for adding readme.md
+------------------------------------------------------
+$ git commit -m 'Added readme.md file'
+[master d2377e7] Added readme.md file
+ 2 files changed, 9 insertions(+), 1 deletion(-)
+ create mode 100644 reame.md
+
  $ git status
  On branch master
  nothing to commit, working tree clean
- ------------------------------------------------------
-…or create a new repository on the command line
+------------------------------------------------------
+
+- Add a new project to the GitHub repository.
+- After adding new repository to GitHub You will see this
+------------------------------------------------------
+create a new repository on the command line
 ------------------------------------------------------
 echo "# GithubHowTo" >> README.md
 git init
@@ -62,15 +110,40 @@ git add README.md
 git commit -m "first commit"
 git remote add origin git@github.com:dzineer/GithubHowTo.git
 git push -u origin master
+------------------------------------------------------
 …or push an existing repository from the command line
-
+------------------------------------------------------
 git remote add origin git@github.com:dzineer/GithubHowTo.git
 git push -u origin master
-
-
+------------------------------------------------------
+- Add new remote branch to repository
+------------------------------------------------------
+git remote add origin git@github.com:dzineer/GithubHowTo.git
+------------------------------------------------------
+- Confirm git remote was added successfully
+------------------------------------------------------
 $ git remote -v
 origin  git@github.com:dzineer/GithubHowTo.git (fetch)
 origin  git@github.com:dzineer/GithubHowTo.git (push)
-
+------------------------------------------------------
+- Display our git remote branch
+------------------------------------------------------
 $ git branch
-/i/projects/Jade_and_me/frank/projects/2017/GithubHowTo (master)
+* master
+------------------------------------------------------
+- Push our local repository to GitHub remote
+------------------------------------------------------
+$ git push -u origin master
+Counting objects: 15, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (13/13), done.
+Writing objects: 100% (15/15), 2.91 KiB | 0 bytes/s, done.
+Total 15 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), done.
+To github.com:dzineer/GithubHowTo.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+------------------------------------------------------
+
+Okay what if we make changes ?
+Change readme.md file to add author
