@@ -144,6 +144,46 @@ To github.com:dzineer/GithubHowTo.git
  * [new branch]      master -> master
 Branch master set up to track remote branch master from origin.
 ------------------------------------------------------
+- Okay what if we make changes ?
+- Change readme.md file to add author
+------------------------------------------------------
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
 
-Okay what if we make changes ?
-Change readme.md file to add author
+        modified:   docs/github.md
+        modified:   reame.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+$ git commit -a -m 'Added Author'
+[master 48caf4f] Added Author
+ 2 files changed, 82 insertions(+), 7 deletions(-)
+
+------------------------------------------------------
+- Add changes to Github
+------------------------------------------------------
+$ git push
+Counting objects: 5, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 1.75 KiB | 0 bytes/s, done.
+Total 5 (delta 0), reused 0 (delta 0)
+To github.com:dzineer/GithubHowTo.git
+   d2377e7..48caf4f  master -> master
+
+$ git push
+Everything up-to-date
+
+$ git status
+On branch master
+
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working tree clean
+
+$ git push
+Everything up-to-date
+------------------------------------------------------
