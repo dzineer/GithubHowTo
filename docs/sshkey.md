@@ -3,14 +3,14 @@ Generating SSH Keys (using Git Bash)
 
 
 See if you have any ssh keys
-=======================================
+----------------------------
 ```
 ls ~/.ssh/
 ```
 If empty then create new key or if you want  to use different keys:
 
 Add new sshkey
-=============================================
+--------------
 ssh-keygen -t rsa -b 4096 -C '<github:email>'
 
 ```
@@ -18,7 +18,7 @@ ssh-keygen -t rsa -b 4096 -C 'frank@dzineer.com'
 ```
 
 Check if ssh-agent is running:
-==============================
+------------------------------
 ```
 eval "$(ssh-agent -s)"
 
@@ -26,22 +26,23 @@ Agent pid 343439 <--- some number
 ```
 
 Find generated ssh-keys (private, public)
-======================================================================
+-----------------------------------------
 ```
 id_rsa <--- private key
 id_rsa.pub <--- public key
 ```
 
 Add our new ssh-key( private ) to our local identities
-======================================================
+------------------------------------------------------
 ```
 ssh-add <ssh-key-private:path>/id_rsa
 -- output:
 
 Identity added: <ssh-key-private:path>/id_rsa (<ssh-key-private:path>/id_rsa)
 ```
+
 Get the public key and add it to GitHub
-==========================================
+---------------------------------------
 On Page: https://github.com/settings/ssh
 cat <ssh-key-private:path>/id_rsa.public
 
@@ -55,7 +56,7 @@ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDJWb42bK8uXBwFdxX1ZVzEL5weWzAjCKnRdaJfCv+M
 Copy output as public key to save in github
 
 Connect to github with new User
-=================================
+-------------------------------
 ```
 ssh -T git@github.com
 ```
