@@ -12,6 +12,7 @@ Initialized empty Git repository in I:/Projects/Jade_and_me/frank/projects/2017/
 ```
 
 ```
+
 git status
 ----------
 
@@ -34,6 +35,7 @@ To tell git which files and directories to ignore (that we don't want stored in 
 Create file: .gitignore
 
 File: .gitignore:
+
 ```
 .git
 ```
