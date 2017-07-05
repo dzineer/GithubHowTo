@@ -223,7 +223,7 @@ Okay what if we make changes ?
 ------------------------------
 Change readme.md file to add author
 
-Get the status again
+Get the status
 
 ```
 $ git status
@@ -237,13 +237,17 @@ Changes not staged for commit:
         modified:   reame.md
 
 no changes added to commit (use "git add" and/or "git commit -a")
+```
 
+Commit changes
+
+```
 $ git commit -a -m 'Added Author'
 [master 48caf4f] Added Author
  2 files changed, 82 insertions(+), 7 deletions(-)
 ```
 
-Add changes to Github
+Add the changes to Github
 ---------------------
 
 ```
@@ -255,7 +259,10 @@ Writing objects: 100% (5/5), 1.75 KiB | 0 bytes/s, done.
 Total 5 (delta 0), reused 0 (delta 0)
 To github.com:dzineer/GithubHowTo.git
    d2377e7..48caf4f  master -> master
+```
+git push again to confirm
 
+```
 $ git push
 Everything up-to-date
 ```
@@ -268,8 +275,11 @@ On branch master
 
 Your branch is up-to-date with 'origin/master'.
 nothing to commit, working tree clean
+```
 
+git push again to confirm
+
+```
 $ git push
 Everything up-to-date
-
 ```
