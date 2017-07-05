@@ -46,7 +46,14 @@ $ git commit -m 'Initial commit'
 ------------------------------------------------------
 - commit changes to files already being monitored
 ------------------------------------------------------
-git
+$ git commit -a -m 'Update copy'
+[master 77f7ad2] Update copy
+ 1 file changed, 50 insertions(+), 1 deletion(-)
+
+ $ git status
+ On branch master
+ nothing to commit, working tree clean
+ ------------------------------------------------------
 …or create a new repository on the command line
 ------------------------------------------------------
 echo "# GithubHowTo" >> README.md
