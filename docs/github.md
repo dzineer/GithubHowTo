@@ -1,7 +1,21 @@
-- go to folder you want to use init
+Using Git Repositry & Git Commands
+==================================
+
+git init
+--------
+Go to folder you want to use init
+
+```
 $ git init
 Initialized empty Git repository in I:/Projects/Jade_and_me/frank/projects/2017/GithubHowTo/.git/
 - get the status of git project
+```
+
+```
+git status
+----------
+
+```
 $ git status
 On branch master
 
@@ -13,16 +27,22 @@ Untracked files:
         docs/
 
 nothing added to commit but untracked files present (use "git add" to track)
+```
 
-- To tell git which files and directories to ignore (that we don't want stored in repository)
-- create file: .gitignore
-------------------------------------------------------
+To tell git which files and directories to ignore (that we don't want stored in repository)
+-------------------------------------------------------------------------------------------
+Create file: .gitignore
+
 File: .gitignore:
-------------------------------------------------------
+```
 .git
+```
+
+git add - Add files to local git repository
 ------------------------------------------------------
-- add files to local git repository
+```
 $ git add .
+
 $ git status
 On branch master
 
@@ -34,9 +54,13 @@ Changes to be committed:
         new file:   .gitignore
         new file:   docs/github.md
         new file:   docs/sshkey.md
-------------------------------------------------------
-- commit changes to git respository
-------------------------------------------------------
+```
+
+git commit
+----------
+Commit changes to git respository
+
+```
 $ git commit -m 'Initial commit'
 [master (root-commit) 70a6368] Initial commit
  3 files changed, 53 insertions(+)
@@ -53,13 +77,16 @@ $ git commit -a -m 'Update copy'
 $ git status
  On branch master
  nothing to commit, working tree clean
-------------------------------------------------------
--Add new File for project readme.md (example)
-------------------------------------------------------
+ ```
+ 
+Add new File for project readme.md (example)
+--------------------------------------------
 File: readme.md:
-------------------------------------------------------
+
+```
 GitHub How To Documentation With Examples
-------------------------------------------------------
+```
+
 $ git status
 On branch master
 Changes not staged for commit:
@@ -74,9 +101,12 @@ Untracked files:
         reame.md
 
 no changes added to commit (use "git add" and/or "git commit -a")
+```
+
+
+Add new readme.md file to repository
 ------------------------------------------------------
-- Add new readme.md file to repository
-------------------------------------------------------
+```
 $ git add .
 
 $ git status
@@ -86,53 +116,71 @@ Changes to be committed:
 
         modified:   docs/github.md
         new file:   reame.md
-------------------------------------------------------
+```
+
 Commit changes for adding readme.md
-------------------------------------------------------
+-----------------------------------
+
+```
 $ git commit -m 'Added readme.md file'
 [master d2377e7] Added readme.md file
  2 files changed, 9 insertions(+), 1 deletion(-)
  create mode 100644 reame.md
 
- $ git status
+$ git status
  On branch master
  nothing to commit, working tree clean
-------------------------------------------------------
+``` 
 
-- Add a new project to the GitHub repository.
-- After adding new repository to GitHub You will see this
-------------------------------------------------------
+Add a new project to the GitHub repository.
+-------------------------------------------
+After adding new repository to GitHub You will see this
+
+```
 create a new repository on the command line
-------------------------------------------------------
+
 echo "# GithubHowTo" >> README.md
 git init
 git add README.md
 git commit -m "first commit"
 git remote add origin git@github.com:dzineer/GithubHowTo.git
 git push -u origin master
-------------------------------------------------------
+
 …or push an existing repository from the command line
-------------------------------------------------------
+
 git remote add origin git@github.com:dzineer/GithubHowTo.git
 git push -u origin master
-------------------------------------------------------
-- Add new remote branch to repository
-------------------------------------------------------
+```
+
+Add new remote branch to repository
+-----------------------------------
+
+```
 git remote add origin git@github.com:dzineer/GithubHowTo.git
-------------------------------------------------------
-- Confirm git remote was added successfully
-------------------------------------------------------
+```
+
+Confirm git remote was added successfully
+-----------------------------------------
+
+```
 $ git remote -v
 origin  git@github.com:dzineer/GithubHowTo.git (fetch)
 origin  git@github.com:dzineer/GithubHowTo.git (push)
-------------------------------------------------------
-- Display our git remote branch
-------------------------------------------------------
+```
+
+
+Display our git remote branch
+-----------------------------
+
+```
 $ git branch
 * master
-------------------------------------------------------
-- Push our local repository to GitHub remote
-------------------------------------------------------
+```
+
+Push our local repository to GitHub remote
+------------------------------------------
+
+```
 $ git push -u origin master
 Counting objects: 15, done.
 Delta compression using up to 8 threads.
@@ -143,10 +191,13 @@ remote: Resolving deltas: 100% (2/2), done.
 To github.com:dzineer/GithubHowTo.git
  * [new branch]      master -> master
 Branch master set up to track remote branch master from origin.
-------------------------------------------------------
-- Okay what if we make changes ?
-- Change readme.md file to add author
-------------------------------------------------------
+```
+
+Okay what if we make changes ?
+------------------------------
+Change readme.md file to add author
+
+```
 $ git status
 On branch master
 Your branch is up-to-date with 'origin/master'.
@@ -162,10 +213,12 @@ no changes added to commit (use "git add" and/or "git commit -a")
 $ git commit -a -m 'Added Author'
 [master 48caf4f] Added Author
  2 files changed, 82 insertions(+), 7 deletions(-)
+```
 
-------------------------------------------------------
-- Add changes to Github
-------------------------------------------------------
+Add changes to Github
+---------------------
+
+```
 $ git push
 Counting objects: 5, done.
 Delta compression using up to 8 threads.
@@ -186,4 +239,5 @@ nothing to commit, working tree clean
 
 $ git push
 Everything up-to-date
-------------------------------------------------------
+
+```
