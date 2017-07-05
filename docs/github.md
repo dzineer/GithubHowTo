@@ -9,7 +9,6 @@ Go to folder you want to use init
 $ git init
 Initialized empty Git repository in I:/Projects/Jade_and_me/frank/projects/2017/GithubHowTo/.git/
 - get the status of git project
-```
 
 ```
 
