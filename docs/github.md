@@ -88,6 +88,9 @@ File: readme.md:
 GitHub How To Documentation With Examples
 ```
 
+Check the git status again
+
+```
 $ git status
 On branch master
 Changes not staged for commit:
@@ -107,6 +110,7 @@ no changes added to commit (use "git add" and/or "git commit -a")
 
 Add new readme.md file to repository
 ------------------------------------------------------
+
 ```
 $ git add .
 
