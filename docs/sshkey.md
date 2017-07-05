@@ -44,6 +44,7 @@ Identity added: <ssh-key-private:path>/id_rsa (<ssh-key-private:path>/id_rsa)
 Get the public key and add it to GitHub
 ---------------------------------------
 On Page: https://github.com/settings/ssh
+
 cat <ssh-key-private:path>/id_rsa.public
 
 output (example):
