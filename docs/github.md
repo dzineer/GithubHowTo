@@ -41,9 +41,14 @@ File: .gitignore:
 
 git add - Add files to local git repository
 ------------------------------------------------------
+
 ```
 $ git add .
+```
 
+Get the status
+
+```
 $ git status
 On branch master
 
@@ -68,17 +73,24 @@ $ git commit -m 'Initial commit'
  create mode 100644 .gitignore
  create mode 100644 docs/github.md
  create mode 100644 docs/sshkey.md       
-------------------------------------------------------
-- commit changes to files already being monitored
-------------------------------------------------------
+```
+
+commit changes to files already being monitored
+-----------------------------------------------
+
+```
 $ git commit -a -m 'Update copy'
 [master 77f7ad2] Update copy
  1 file changed, 50 insertions(+), 1 deletion(-)
+```
 
+Get the status again
+
+```
 $ git status
  On branch master
  nothing to commit, working tree clean
- ```
+```
  
 Add new File for project readme.md (example)
 --------------------------------------------
@@ -113,7 +125,10 @@ Add new readme.md file to repository
 
 ```
 $ git add .
+```
+Get the status again
 
+```
 $ git status
 On branch master
 Changes to be committed:
@@ -131,7 +146,11 @@ $ git commit -m 'Added readme.md file'
 [master d2377e7] Added readme.md file
  2 files changed, 9 insertions(+), 1 deletion(-)
  create mode 100644 reame.md
+```
 
+Get the status again
+
+```
 $ git status
  On branch master
  nothing to commit, working tree clean
@@ -141,18 +160,20 @@ Add a new project to the GitHub repository.
 -------------------------------------------
 After adding new repository to GitHub You will see this
 
-```
 create a new repository on the command line
 
+```
 echo "# GithubHowTo" >> README.md
 git init
 git add README.md
 git commit -m "first commit"
 git remote add origin git@github.com:dzineer/GithubHowTo.git
 git push -u origin master
+```
 
 …or push an existing repository from the command line
 
+```
 git remote add origin git@github.com:dzineer/GithubHowTo.git
 git push -u origin master
 ```
@@ -202,6 +223,8 @@ Okay what if we make changes ?
 ------------------------------
 Change readme.md file to add author
 
+Get the status again
+
 ```
 $ git status
 On branch master
@@ -235,7 +258,11 @@ To github.com:dzineer/GithubHowTo.git
 
 $ git push
 Everything up-to-date
+```
 
+Get the status again
+
+```
 $ git status
 On branch master
 
