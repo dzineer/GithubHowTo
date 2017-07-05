@@ -9,8 +9,8 @@ ls ~/.ssh/
 ```
 If empty then create new key or if you want  to use different keys:
 
-Add new sshkey
---------------
+Add New SSH Key
+---------------
 ssh-keygen -t rsa -b 4096 -C '<github:email>'
 
 ```
